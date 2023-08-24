@@ -1,11 +1,11 @@
 import { Card } from '@nextui-org/react'
 import Image from 'next/image'
-import Hero from './components/Hero'
+import Sidebar from './components/Sidebar'
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <Hero />
+    <main className="flex-col items-center justify-between ">
+      <Sidebar />
     </main>
   )
 }
