@@ -10,7 +10,7 @@ export default function Projects() {
         {
             title: "Simple SMS",
             content: "A web application for purchasing temporary disposable SMS numbers with instant phone verification",
-            link: "simple-sms.io",
+            link: "https://simple-sms.io",
             logo: "https://pbs.twimg.com/profile_images/1620568363108892672/Cq1o18fU_400x400.png",
             github: "",
             skills: ["Next.js", "Tailwind CSS", "Node.js", "MongoDB"]
