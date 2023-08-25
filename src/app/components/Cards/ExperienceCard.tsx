@@ -3,7 +3,7 @@ import { Card, CardBody, CardHeader, Divider, Image } from "@nextui-org/react";
 
 export default function ExperienceCard({ props }: any) {
     return (
-        <Card className="mt-4 w-5/6 h-auto">
+        <Card className="mt-4 max-w-[460px] h-auto">
             <CardHeader className="flex gap-2 justify-start items-start">
                 <Image
                     alt="nextui logo"

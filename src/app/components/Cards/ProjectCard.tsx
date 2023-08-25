@@ -55,15 +55,15 @@ export default function ProjectCard({ props }: any) {
                     {props.skills.map((skill: any, key: any) => {
                         if (key % 2 === 0) {
                             return (
-                                <Chip variant="shadow">{skill}</Chip>
+                                <Chip key={key}>{skill}</Chip>
                             )
                         } else {
                             return (
-                                <Chip variant="flat">{skill}</Chip>
+                                <Chip key={key} >{skill}</Chip>
                             )
                         }
                     })}
-                </div>
+                </div> 
             </CardFooter>
         </Card>
     )

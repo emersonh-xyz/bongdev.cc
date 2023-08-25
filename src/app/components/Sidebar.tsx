@@ -34,7 +34,7 @@ export default function Sidebar() {
                 </CardBody>
             </Card>
 
-            <SpotifyCard />
+            
 
         </div>
 
