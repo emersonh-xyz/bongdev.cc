@@ -27,12 +27,12 @@ export default function Sidebar() {
             </div>
 
             <Card isPressable className="mt-4">
-                <CardBody>
+                <CardBody className="text-xs">
                     <p className="text-zinc-900">Hey, I'm Emerson! 👋</p>
-                    <p className="text-zinc-900 ">I'm currently in school for Computer Science.</p>
                     <p className="text-zinc-900 ">I enjoy doing freelance development and building out client-side applications. </p>
                 </CardBody>
             </Card>
+
 
         </div>
 
