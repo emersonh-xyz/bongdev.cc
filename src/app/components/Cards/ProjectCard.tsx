@@ -50,8 +50,8 @@ export default function ProjectCard({ props }: any) {
                 <p>{props.content}</p>
             </CardBody>
             <Divider />
-            <CardFooter className="h-20">
-                <div className="flex flex-wrap gap-2 justify-start">
+            <CardFooter className="h-24 flex items-start">
+                <div className="flex flex-wrap gap-2">
                     {props.skills.map((skill: any, key: any) => {
                         if (key % 2 === 0) {
                             return (

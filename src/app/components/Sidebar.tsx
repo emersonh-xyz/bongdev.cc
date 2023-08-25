@@ -9,7 +9,7 @@ export default function Sidebar() {
         <div className="flex flex-col w-1/4 text-white bg-zinc-100 p-10 border-r-1 border-zinc-200 justify-center h-full">
 
 
-            <Image width={200} src="./bongo.png"/>
+            <Image width={200} src="./bongo.png" />
             <p className="text-4xl text-zinc-900 font-bold">Emerson Hicks</p>
             <div className="flex mt-4 gap-4 justify-left">
                 <Tooltip showArrow={true} content="@emerson on Discord" placement="bottom">
@@ -35,6 +35,6 @@ export default function Sidebar() {
             </Card>
 
         </div>
-   
+
     )
 }

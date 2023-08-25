@@ -1,7 +1,7 @@
 'use client';
 
 import { Button, Divider, Pagination, Tabs } from "@nextui-org/react";
-import ProjectCard from "./ProjectCard";
+import ProjectCard from "../Cards/ProjectCard";
 
 
 export default function Projects() {
@@ -29,7 +29,7 @@ export default function Projects() {
             link: "https://studiogek.vercel.app/",
             logo: "https://yt3.googleusercontent.com/Ak5-KfSpjDFpZpLy-QutumUjxE7dFny56-H9hYi4gIsAHGmOowvLAXLnF_Ft8MR2HOpw7OL4=s900-c-k-c0x00ffffff-no-rj",
             github: "",
-            skills: ["Next.js", "Tailwind CSS", "NextUI", "NextAuth", "Patreon OAuth"],
+            skills: ["Next.js", "Tailwind CSS", "MongoDB", "NextUI", "NextAuth", "Patreon OAuth"],
         },
         {
             title: "Inkdrop Discord RPC",
@@ -40,17 +40,18 @@ export default function Projects() {
             skills: ["Electron", "Node.js", "JavaScript"]
         }
     ]
-   
+
 
     return (
         <div className="flex justify-center flex-col items-center">
-            <p className="text-3xl font-bold">My work</p>
+            <p className="text-3xl font-bold">Projects</p>
 
             <div className="grid grid-cols-2 gap-5 mt-8">
-                <ProjectCard props={projects[0]} />
-                <ProjectCard props={projects[1]}/>
-                <ProjectCard props={projects[2]}/>
-                <ProjectCard props={projects[3]}/>
+                {projects.map((project) => {
+                    return (
+                        <ProjectCard props={project} />
+                    )
+                })}
             </div>
 
             {/* <Pagination className="mt-8" total={2} initialPage={1} /> */}
