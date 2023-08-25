@@ -2,6 +2,7 @@
 
 import { Button, Card, CardBody, CardHeader, Chip, CircularProgress, Divider, Image, Tooltip } from "@nextui-org/react";
 import { Icon } from '@iconify/react';
+import SpotifyCard from "./Cards/SpotifyCard";
 
 export default function Sidebar() {
     return (
@@ -33,6 +34,7 @@ export default function Sidebar() {
                 </CardBody>
             </Card>
 
+            <SpotifyCard />
 
         </div>
 
