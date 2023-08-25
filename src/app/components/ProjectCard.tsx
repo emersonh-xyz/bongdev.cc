@@ -37,15 +37,21 @@ export default function ProjectCard({ props }: any) {
             <Divider />
             <CardBody>
                 <p>{props.content}</p>
-
             </CardBody>
             <Divider />
-            <CardFooter>
-                <div className="flex gap-2">
-                    <Chip variant="shadow">Next.js</Chip>
-                    <Chip variant="flat">Tailwind CSS</Chip>
-                    <Chip variant="shadow" >Node.js</Chip>
-                    <Chip variant="flat">Mongo</Chip>
+            <CardFooter className="h-20">
+                <div className="flex flex-wrap gap-2">
+                    {props.skills.map((skill: any, key: any) => {
+                        if (key % 2 === 0) {
+                            return (
+                                <Chip variant="shadow">{skill}</Chip>
+                            )
+                        } else {
+                            return (
+                                <Chip variant="flat">{skill}</Chip>
+                            )
+                        }
+                    })}
                 </div>
             </CardFooter>
         </Card>
