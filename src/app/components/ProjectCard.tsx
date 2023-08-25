@@ -24,14 +24,25 @@ export default function ProjectCard({ props }: any) {
                 />
                 <div className="flex flex-col">
                     <p className="text-md">{props.title}</p>
-                    <p className="text-small text-default-500">{props.link}</p>
+
+                    <div className="flex gap-1 justify-left">
+                        <Tooltip showArrow={true} content="View application" placement="bottom">
+                            <Link target="_blank" href={props.link}>
+                                <Icon className="text-zinc-600" width={22} icon="mdi:link" />
+                            </Link>
+                        </Tooltip>
+                        {props.github &&
+                            <Tooltip showArrow={true} content="Open on GitHub" placement="bottom">
+                                <Link target="_blank" href={props.github}>
+                                    <Icon className="text-zinc-600" width={22} icon="mdi:github" />
+                                </Link>
+                            </Tooltip>
+                        }
+
+
+                    </div>
                 </div>
 
-                <div className="flex mt-4 gap-4 justify-left">
-                    <Tooltip showArrow={true} content="Contact me" placement="bottom">
-                        <Icon className="text-zinc-600" width={22} icon="mdi:github" />
-                    </Tooltip>
-                </div>
 
             </CardHeader>
             <Divider />
@@ -40,7 +51,7 @@ export default function ProjectCard({ props }: any) {
             </CardBody>
             <Divider />
             <CardFooter className="h-20">
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 justify-start">
                     {props.skills.map((skill: any, key: any) => {
                         if (key % 2 === 0) {
                             return (
