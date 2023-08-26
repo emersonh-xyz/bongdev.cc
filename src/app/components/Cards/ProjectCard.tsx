@@ -1,7 +1,14 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
-import { Button, Card, CardBody, CardFooter, CardHeader, Chip, Divider, Image, Link, Tooltip } from "@nextui-org/react";
+import { Button, Card, CardBody, CardFooter, CardHeader, Chip, Divider, Image, Link, Skeleton, Tooltip } from "@nextui-org/react";
+import { useEffect, useState } from "react";
 
 export default function ProjectCard({ props }: any) {
+
+    const [loaded, setLoaded] = useState(false)
+
+    useEffect(() => {
+        setLoaded(true)
+    },)
 
     if (props === undefined) {
         props = {
@@ -14,17 +21,19 @@ export default function ProjectCard({ props }: any) {
 
     return (
         <Card className="max-w-[460px]">
+
             <CardHeader className="flex gap-3">
-                <Image
-                    alt="nextui logo"
-                    height={40}
-                    radius="sm"
-                    src={props.logo}
-                    width={40}
-                />
+                <Skeleton isLoaded={loaded}>
+                    <Image
+                        alt="nextui logo"
+                        height={40}
+                        radius="sm"
+                        src={props.logo}
+                        width={40}
+                    />
+                </Skeleton>
                 <div className="flex flex-col">
                     <p className="text-md">{props.title}</p>
-
                     <div className="flex gap-1 justify-left">
                         <Tooltip showArrow={true} content="View application" placement="bottom">
                             <Link target="_blank" href={props.link}>
@@ -49,8 +58,8 @@ export default function ProjectCard({ props }: any) {
             <CardBody>
                 <p>{props.content}</p>
             </CardBody>
-            <Divider />
-            <CardFooter className="h-24 flex items-start">
+
+            <CardFooter className="h-24 flex">
                 <div className="flex flex-wrap gap-2">
                     {props.skills.map((skill: any, key: any) => {
                         if (key % 2 === 0) {
@@ -63,8 +72,8 @@ export default function ProjectCard({ props }: any) {
                             )
                         }
                     })}
-                </div> 
+                </div>
             </CardFooter>
-        </Card>
+        </Card >
     )
 }

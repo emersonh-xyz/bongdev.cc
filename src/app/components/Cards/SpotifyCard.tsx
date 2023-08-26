@@ -1,5 +1,5 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
-import { Card, CardBody, Divider, Image, Link, Progress } from "@nextui-org/react";
+import { Card, CardBody, Divider, Image, Link, Progress, Skeleton } from "@nextui-org/react";
 import { useEffect, useState } from "react";
 
 export default function SpotifyCard({ props }: any) {
@@ -12,19 +12,23 @@ export default function SpotifyCard({ props }: any) {
 
         if (props?.data !== undefined) {
             setSongProgress(props.data.progress);
-            interval = setInterval(() => {
-                setSongProgress((x) => x + 1000)
-            }, 1000)
 
+            if (props?.data.isPlaying) {
+                interval = setInterval(() => {
+                    setSongProgress((x) => x + 1000)
+                }, 1000)
+            }
         }
 
         return () => clearInterval(interval);
     }, [props])
 
     return (
+
         <div>
 
             {props?.data ?
+
                 <Link target="_blank" href={props?.data.songUrl} >
                     <Card isPressable >
                         <CardBody className="p-2">
@@ -52,21 +56,23 @@ export default function SpotifyCard({ props }: any) {
                 :
 
                 <Card isPressable >
-                    <CardBody className="p-2">
-                        <div className="flex items-center">
-                            <Icon icon="mdi:spotify" width={50} />
-                            <div className="ml-2">
-                                <div className="flex items-center ">
-                                    <Icon width={15} icon={"mdi:mute"} /><p className="text-sm ml-1">Not listening to anything</p>
+                    <Skeleton isLoaded={props?.data}>
+                        <CardBody className="p-2">
+                            <div className="flex items-center">
+                                <Icon icon="mdi:spotify" width={50} />
+                                <div className="ml-2">
+                                    <div className="flex items-center ">
+                                        <Icon width={15} icon={"mdi:mute"} /><p className="text-sm ml-1">Not listening to anything</p>
+                                    </div>
+                                    <p className="text-sm ml-1">Concentrating...</p>
                                 </div>
-                                <p className="text-sm ml-1">Concentrating...</p>
-
                             </div>
-                        </div>
-                    </CardBody>
+                        </CardBody>
+                    </Skeleton >
                 </Card>
 
             }
         </div>
+
     )
 }
