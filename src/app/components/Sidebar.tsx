@@ -6,6 +6,7 @@ import SpotifyCard from "./Cards/SpotifyCard";
 import useSWR from 'swr'
 import { useEffect, useState } from "react";
 import { ThemeSwitcher } from "./Utils/ThemeSwitcher";
+import { useTheme } from "next-themes";
 
 export default function Sidebar() {
 
@@ -13,15 +14,15 @@ export default function Sidebar() {
 
     const { data } = useSWR('/api/spotify', fetcher)
 
+    const { theme, setTheme } = useTheme()
 
     return (
 
 
         <div className="flex flex-col w-1/4 bg-zinc-100 p-10 border-r-1 light:border-zinc-200 dark:bg-zinc-800 dark:border-zinc-600 justify-center h-full">
-
-
-
-            <Image width={200} src="./bongo.png" />
+            <Image
+                onClick={() => { theme === "light" ? setTheme('dark') : setTheme('light') }}
+                width={200} src="./bongo.png" />
             <p className="text-4xl light:text-zinc-900 font-bold">Emerson Hicks</p>
             <div className="flex mt-4 gap-4 justify-left">
                 <Tooltip showArrow={true} content="@emerson on Discord" placement="bottom">

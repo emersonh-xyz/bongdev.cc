@@ -56,19 +56,19 @@ export default function SpotifyCard({ props }: any) {
                 :
 
                 <Card isPressable >
-                    <Skeleton isLoaded={props?.data}>
-                        <CardBody className="p-2">
-                            <div className="flex items-center">
-                                <Icon icon="mdi:spotify" width={50} />
-                                <div className="ml-2">
-                                    <div className="flex items-center ">
-                                        <Icon width={15} icon={"mdi:mute"} /><p className="text-sm ml-1">Not listening to anything</p>
-                                    </div>
-                                    <p className="text-sm ml-1">Concentrating...</p>
+
+                    <CardBody className="p-2">
+                        <div className="flex items-center">
+                            <Icon icon="mdi:spotify" width={40} />
+                            <div className="ml-2">
+                                <div className="flex items-center ">
+                                    <Icon width={15} icon={"mdi:mute"} /><p className="text-sm ml-1">Not listening to anything</p>
                                 </div>
+                                <p className="text-sm ml-1">Focused...</p>
                             </div>
-                        </CardBody>
-                    </Skeleton >
+                        </div>
+                    </CardBody>
+
                 </Card>
 
             }

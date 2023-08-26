@@ -6,7 +6,6 @@ import { useTheme } from "next-themes";
 export default function ProjectCard({ props }: any) {
 
     const [loaded, setLoaded] = useState(false)
-    const { theme, setTheme } = useTheme()
 
     useEffect(() => {
         setLoaded(true)
@@ -32,7 +31,6 @@ export default function ProjectCard({ props }: any) {
                     radius="sm"
                     src={props.logo}
                     width={40}
-                    onClick={() => { setTheme('light') }}
                 />
 
                 <div className="flex flex-col">
