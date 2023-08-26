@@ -20,10 +20,13 @@ export default function Sidebar() {
 
 
         <div className="sm:flex sm:flex-col sm:w-1/4 w-fit justify-center h-full bg-zinc-100 p-10 border-r-1 light:border-zinc-200 dark:bg-zinc-800 dark:border-zinc-600 ">
-            <Image
-                onClick={() => { theme === "light" ? setTheme('dark') : setTheme('light') }}
-                src="./bongo.png"
-                className="" />
+            <Tooltip showArrow={true} content="Click for a surprise">
+                <Image
+                    onClick={() => { theme === "light" ? setTheme('dark') : setTheme('light') }}
+                    src="./bongo.png"
+
+                />
+            </Tooltip>
             <p className="text-4xl light:text-zinc-900 font-bold text-center sm:text-left">Emerson Hicks</p>
             <div className="flex mt-4 gap-4 sm:justify-start justify-center">
                 <Tooltip showArrow={true} content="@emerson on Discord" placement="bottom">
@@ -52,6 +55,6 @@ export default function Sidebar() {
             <div className="mt-4 flex justify-center sm:justify-start">
                 <SpotifyCard props={data} />
             </div>
-        </div>
+        </div >
     )
 }
