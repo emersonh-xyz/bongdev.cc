@@ -46,7 +46,7 @@ export default function Projects() {
         <div className="flex justify-center flex-col items-center">
             <p className="text-3xl font-bold">Projects</p>
 
-            <div className="grid grid-cols-2 gap-5 mt-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-8">
                 {projects.map((project) => {
                     return (
                         <ProjectCard props={project} />

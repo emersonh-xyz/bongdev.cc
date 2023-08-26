@@ -19,12 +19,13 @@ export default function Sidebar() {
     return (
 
 
-        <div className="flex flex-col w-1/4 bg-zinc-100 p-10 border-r-1 light:border-zinc-200 dark:bg-zinc-800 dark:border-zinc-600 justify-center h-full">
+        <div className="sm:flex sm:flex-col sm:w-1/4 w-fit justify-center h-full bg-zinc-100 p-10 border-r-1 light:border-zinc-200 dark:bg-zinc-800 dark:border-zinc-600 ">
             <Image
                 onClick={() => { theme === "light" ? setTheme('dark') : setTheme('light') }}
-                width={200} src="./bongo.png" />
-            <p className="text-4xl light:text-zinc-900 font-bold">Emerson Hicks</p>
-            <div className="flex mt-4 gap-4 justify-left">
+                src="./bongo.png"
+                className="" />
+            <p className="text-4xl light:text-zinc-900 font-bold text-center sm:text-left">Emerson Hicks</p>
+            <div className="flex mt-4 gap-4 sm:justify-start justify-center">
                 <Tooltip showArrow={true} content="@emerson on Discord" placement="bottom">
                     <Icon className="text-zinc-900 dark:text-zinc-50" width={26} icon="ic:baseline-discord" />
                 </Tooltip>
@@ -43,12 +44,12 @@ export default function Sidebar() {
                 </Tooltip>
             </div>
             <Card shadow="sm" className="mt-4">
-                <CardBody className="text-xs">
+                <CardBody className="sm:text-xs sm:text-left text-sm text-center">
                     <p className="text-zinc-900 dark:text-zinc-50">Hey, I'm Emerson! 👋</p>
                     <p className="text-zinc-900 dark:text-zinc-50">I enjoy doing freelance development and building out client-side applications. </p>
                 </CardBody>
             </Card>
-            <div className="mt-4">
+            <div className="mt-4 flex justify-center sm:justify-start">
                 <SpotifyCard props={data} />
             </div>
         </div>

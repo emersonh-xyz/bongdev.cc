@@ -10,8 +10,8 @@ export default function Hero() {
     return (
         <div className="flex flex-col justify-center items-center mt-10 p-10">
             <Projects />
-            <Skills />
             <Experience />
+            <Skills />
         </div>
     )
 }

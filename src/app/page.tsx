@@ -14,9 +14,9 @@ export default function Home() {
 
   return (
 
-    <main className="h-screen flex">
+    <main className="h-screen flex flex-col sm:flex-row">
       <Sidebar />
-      <div className="flex-1 overflow-y-auto px-4">
+      <div className="sm:flex-1 sm:overflow-y-auto px-4">
         <Hero />
       </div>
     </main>

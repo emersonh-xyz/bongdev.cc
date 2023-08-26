@@ -13,7 +13,7 @@ export default function ExperienceCard({ props }: any) {
                     width={40}
                 />
                 <div className='flex-col'>
-                    <p className="font-bold text-md">{props.company}</p>
+                    <p className="font-bold md:text-md text-xs">{props.company}</p>
                     <p className="text-xs">{props.role}</p>
                 </div>
                 <div className="flex justify-end">
@@ -22,7 +22,7 @@ export default function ExperienceCard({ props }: any) {
             </CardHeader>
             <Divider></Divider>
             <CardBody>
-                <p>{props.description}</p>
+                <p className="text-xs sm:text-md">{props.description}</p>
             </CardBody>
         </Card>
     )

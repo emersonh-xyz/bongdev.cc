@@ -22,7 +22,6 @@ export default function ProjectCard({ props }: any) {
 
     return (
         <Card className="max-w-[460px]">
-
             <CardHeader className="flex gap-3">
 
                 <Image
@@ -56,7 +55,8 @@ export default function ProjectCard({ props }: any) {
                 <p>{props.content}</p>
             </CardBody>
 
-            <CardFooter className="h-24 flex">
+            <Divider />
+            <CardFooter className="sm:h-24 flex items-start">
                 <div className="flex flex-wrap gap-2">
                     {props.skills.map((skill: any, key: any) => {
                         if (key % 2 === 0) {
