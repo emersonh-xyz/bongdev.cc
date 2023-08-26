@@ -5,7 +5,7 @@ import Hero from './components/Hero'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Bongo Development',
+  title: 'bongodev.cc | Portfolio',
   description: 'Portfolio website',
   themeColor: "#FFFFFF"
 }
