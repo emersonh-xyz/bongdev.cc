@@ -63,7 +63,6 @@ export default function SpotifyCard({ props }: any) {
                                     <p className="text-sm ml-1">{data.data.title} - {data.data.artist[0].name}</p>
                                     <Progress color="success" className="mt-1" size="sm" aria-label="Loading..." value={songProgress} maxValue={data.data.duration} />
                                 </div>
-
                             </div>
                         </CardBody>
                     </Card>

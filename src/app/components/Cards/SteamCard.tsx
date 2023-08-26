@@ -32,7 +32,7 @@ export default function SteamCard() {
                             {data.steam.getGames ?
                                 <p className="text-sm ml-1">{data.steam.getGames}</p>
                                 :
-                                <p className="text-sm ">{data.steam.getStatus === "Offline" && "😴"}😃</p>
+                                <p className="text-sm ">{data.steam.getStatus === "Offline" ? "😴" : "😃"}</p>
                             }
 
                         </div>
