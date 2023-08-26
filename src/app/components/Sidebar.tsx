@@ -7,6 +7,7 @@ import useSWR from 'swr'
 import { useEffect, useState } from "react";
 import { ThemeSwitcher } from "./Utils/ThemeSwitcher";
 import { useTheme } from "next-themes";
+import SteamCard from "./Cards/SteamCard";
 
 export default function Sidebar() {
 
@@ -54,6 +55,9 @@ export default function Sidebar() {
             </Card>
             <div className="mt-4 flex justify-center sm:justify-start">
                 <SpotifyCard props={data} />
+            </div>
+            <div className="mt-4 flex justify-center sm:justify-start">
+                <SteamCard />
             </div>
         </div >
     )
