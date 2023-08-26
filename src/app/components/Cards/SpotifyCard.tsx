@@ -30,7 +30,7 @@ export default function SpotifyCard({ props }: any) {
             {props?.data ?
 
                 <Link target="_blank" href={props?.data.songUrl} >
-                    <Card isPressable >
+                    <Card shadow="sm" isPressable >
                         <CardBody className="p-2">
                             <div className="flex items-center">
                                 <Image
