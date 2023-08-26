@@ -3,14 +3,15 @@ import { Card, CardBody, Divider, Image, Link, Progress, Skeleton } from "@nextu
 import { useEffect, useState } from "react";
 import useSWR from 'swr'
 
-const fetcher = (url: any) => fetch(url).then((res) => res.json())
 
-export default function SteamCard({ props }: any) {
 
+export default function SteamCard() {
+
+    const fetcher = (url: any) => fetch(url).then((res) => res.json())
     const { data, error, isLoading } = useSWR('/api/steam', fetcher)
 
     if (error) return <div>failed to load</div>
-    if (isLoading) return <div>loading...</div>
+    if (isLoading) return <Skeleton><Card><CardBody>loading...</CardBody></Card></Skeleton>
     return (
 
         <Link target="_blank" href={data.steam.getprofileUrl}>

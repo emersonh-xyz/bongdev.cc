@@ -11,10 +11,6 @@ import SteamCard from "./Cards/SteamCard";
 
 export default function Sidebar() {
 
-    const fetcher = (url: any) => fetch(url).then((res) => res.json())
-
-    const { data } = useSWR('/api/spotify', fetcher)
-
     const { theme, setTheme } = useTheme()
 
     return (
@@ -54,7 +50,7 @@ export default function Sidebar() {
                 </CardBody>
             </Card>
             <div className="mt-4 flex justify-center sm:justify-start">
-                <SpotifyCard props={data} />
+                <SpotifyCard />
             </div>
             <div className="mt-4 flex justify-center sm:justify-start">
                 <SteamCard />
