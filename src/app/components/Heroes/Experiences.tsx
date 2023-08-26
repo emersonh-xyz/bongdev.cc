@@ -16,18 +16,16 @@ export default function Experience() {
             'role': 'Software Engineer Intern',
             'date': 'June 2023 - August 2023',
             'icon': 'https://pbs.twimg.com/profile_images/1278360830367674368/SfqcgSVD_400x400.jpg',
-            'description': `This is just some boilerplate description. This is just some boilerplate description.
-            This is just some boilerplate description.sffdsfdsff`
+            'description': `To be filled out.`
         },
-      
+
         {
 
             'company': 'Fidelity Investments',
             'role': 'Software Engineer Intern',
             'date': 'June 2022 - August 2022',
             'icon': 'https://pbs.twimg.com/profile_images/1278360830367674368/SfqcgSVD_400x400.jpg',
-            'description': `This is just some boilerplate description. This is just some boilerplate description.
-                This is just some boilerplate description.sffdsfdsff`
+            'description': `To be filled out.`
 
         }
     ]

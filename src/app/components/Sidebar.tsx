@@ -3,13 +3,18 @@
 import { Button, Card, CardBody, CardHeader, Chip, CircularProgress, Divider, Image, Tooltip } from "@nextui-org/react";
 import { Icon } from '@iconify/react';
 import SpotifyCard from "./Cards/SpotifyCard";
+import useSWR from 'swr'
 
 export default function Sidebar() {
+
+    const fetcher = (url: any) => fetch(url).then((res) => res.json())
+
+    const { data } = useSWR('/api/spotify', fetcher)
+
+
     return (
 
         <div className="flex flex-col w-1/4 text-white bg-zinc-100 p-10 border-r-1 border-zinc-200 justify-center h-full">
-
-
             <Image width={200} src="./bongo.png" />
             <p className="text-4xl text-zinc-900 font-bold">Emerson Hicks</p>
             <div className="flex mt-4 gap-4 justify-left">
@@ -34,7 +39,9 @@ export default function Sidebar() {
                 </CardBody>
             </Card>
 
-            
+            <div className="mt-4">
+                <SpotifyCard props={data} />
+            </div>
 
         </div>
 
