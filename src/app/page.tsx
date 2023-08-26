@@ -2,9 +2,15 @@ import { Card } from '@nextui-org/react'
 import Image from 'next/image'
 import Sidebar from './components/Sidebar'
 import Hero from './components/Hero'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Bongo Development',
+  description: 'Portfolio website',
+  themeColor: "#FFFFFF"
+}
 
 export default function Home() {
-
 
   return (
 
