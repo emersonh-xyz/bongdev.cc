@@ -22,7 +22,7 @@ export default function ExperienceCard({ props }: any) {
             </CardHeader>
             <Divider></Divider>
             <CardBody>
-                <p className="text-xs sm:text-md">{props.description}</p>
+                <p className="text-xs sm:text-sm">{props.description}</p>
             </CardBody>
         </Card>
     )
