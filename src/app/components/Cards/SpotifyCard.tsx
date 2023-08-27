@@ -37,9 +37,9 @@ export default function SpotifyCard({ props }: any) {
                             <Icon className="text-[#1DB954]" icon="mdi:spotify" width={40} />
                             <div className="ml-2">
                                 <div className="flex items-center ">
-                                    <Icon width={15} icon={"mdi:mute"} /><p className="text-sm ml-1">Not listening to anything</p>
+                                    <Icon width={15} icon={"mdi:mute"} /><p className="text-sm ml-1">Currently listening to nothing</p>
                                 </div>
-                                <p className="text-sm ml-1">Focused...</p>
+
                             </div>
                         </div>
                     </CardBody>
