@@ -43,7 +43,7 @@ export default function SteamCard() {
                                     {!data.steam.getGames ?
                                         <p className="text-sm ml-1">Not playing any games</p>
                                         :
-                                        <p className="text-sm ml-1">{data.steam.getGames}</p>
+                                        <p className="text-sm ml-1">{data.steam.getGames} 🎮</p>
                                     }
                                 </div>
                             </div>
