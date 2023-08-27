@@ -31,25 +31,19 @@ export default function SteamCard() {
                 </Card>
                 :
                 <Link target="_blank" href={data.steam.getprofileUrl}>
-                    <Card shadow="sm" isPressable >
+                    <Card isPressable >
                         <CardBody className="p-2">
                             <div className="flex items-center">
-                                <Image
-                                    alt="Album cover"
-                                    className="object-cover"
-                                    shadow="md"
-                                    src={data.steam.getAvatar}
-                                    width="50px"
-                                />
+                                <Icon className="" icon="mdi:steam" width={40} />
                                 <div className="ml-2">
                                     <div className="flex items-center ">
-                                        <Icon width={15} icon={"mdi:steam"} /><p className="text-sm ml-1">{data.steam.getStatus}</p>
+                                        {!data.steam.getGames ?
+                                            <p className="text-sm ml-1">Not playing any games</p>
+                                            :
+                                            <p className="text-sm ml-1">{data.steam.getGames}</p>
+                                        }
                                     </div>
-                                    {data.steam.getGames ?
-                                        <p className="text-sm ml-1">{data.steam.getGames}</p>
-                                        :
-                                        <p className="text-sm ">{data.steam.getStatus === "Offline" ? "😴" : "😃"}</p>
-                                    }
+                                    <p className="text-sm ml-1">{data.steam.getStatus}</p>
                                 </div>
                             </div>
                         </CardBody>
