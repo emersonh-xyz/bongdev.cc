@@ -37,13 +37,14 @@ export default function SteamCard() {
                                 <Icon className="" icon="mdi:steam" width={40} />
                                 <div className="ml-2">
                                     <div className="flex items-center ">
-                                        {!data.steam.getGames ?
-                                            <p className="text-sm ml-1">Not playing any games</p>
-                                            :
-                                            <p className="text-sm ml-1">{data.steam.getGames}</p>
-                                        }
+                                        <p className="text-sm ml-1">{data.steam.getStatus}</p>
                                     </div>
-                                    <p className="text-sm ml-1">{data.steam.getStatus}</p>
+
+                                    {!data.steam.getGames ?
+                                        <p className="text-sm ml-1">Not playing any games</p>
+                                        :
+                                        <p className="text-sm ml-1">{data.steam.getGames}</p>
+                                    }
                                 </div>
                             </div>
                         </CardBody>
