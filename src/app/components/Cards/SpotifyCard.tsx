@@ -30,7 +30,7 @@ export default function SpotifyCard({ props }: any) {
     if (isLoading) return <Skeleton><Card><CardBody>loading...</CardBody></Card></Skeleton>
     return (
         <div>
-            {!data.data.isPlaying ?
+            {!data.data?.isPlaying ?
                 <Card isPressable >
                     <CardBody className="p-2">
                         <div className="flex items-center">

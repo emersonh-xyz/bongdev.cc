@@ -34,7 +34,6 @@ export default function SteamCard() {
                                 :
                                 <p className="text-sm ">{data.steam.getStatus === "Offline" ? "😴" : "😃"}</p>
                             }
-
                         </div>
                     </div>
                 </CardBody>
