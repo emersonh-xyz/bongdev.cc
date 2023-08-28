@@ -7,7 +7,7 @@ import Skills from "./Heroes/Skills";
 import Experience from "./Heroes/Experiences";
 import Footer from "./Footer";
 
-export default function Hero() {
+export default function Landing() {
     return (
         <div className="flex flex-col justify-center items-center mt-10 p-10">
             <Projects />

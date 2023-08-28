@@ -1,7 +1,7 @@
 import { Card } from '@nextui-org/react'
 import Image from 'next/image'
 import Sidebar from './components/Sidebar'
-import Hero from './components/Hero'
+import Landing from './components/Landing'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -17,7 +17,7 @@ export default function Home() {
     <main className="h-screen flex flex-col sm:flex-row">
       <Sidebar />
       <div className="sm:flex-1 sm:overflow-y-auto px-4">
-        <Hero />
+        <Landing />
       </div>
     </main>
   )

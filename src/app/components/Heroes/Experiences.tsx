@@ -26,7 +26,7 @@ export default function Experience() {
             'role': 'Software Engineer Intern',
             'date': 'June 2022 - August 2022',
             'icon': 'https://pbs.twimg.com/profile_images/1278360830367674368/SfqcgSVD_400x400.jpg',
-            'description': `Worked as a Backend engineer utilizing Java Spring & SQL to build out several features. These features allowed clients to view their anticpated shares of stock based on various dates.`
+            'description': `Worked as a Backend engineer utilizing Java Spring & SQL to build out several features. These features allowed clients to view their anticipated shares of stock based on various dates.`
 
         }
     ]
