@@ -70,7 +70,7 @@ export default function Projects() {
             </div>
 
             {isShowingMoreProjects &&
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-5">
                     {moreProjects.map((project, key) => {
                         return (
                             <ProjectCard key={key} props={project} />
