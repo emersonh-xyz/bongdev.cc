@@ -2,9 +2,12 @@
 
 import { Button, Divider, Pagination, Tabs } from "@nextui-org/react";
 import ProjectCard from "../Cards/ProjectCard";
+import { useState } from "react";
 
 
 export default function Projects() {
+
+    const [isShowingMoreProjects, setShowingMoreProjects] = useState(false)
 
     const projects = [
         {
@@ -41,6 +44,18 @@ export default function Projects() {
         }
     ]
 
+    const moreProjects =
+        [
+            {
+                title: "clipit.systems",
+                content: "A website designed for users to easily share & upload various gaming clips.",
+                link: "https://clipit.systems",
+                logo: "https://cdn.discordapp.com/attachments/949488673823551578/1145737138122530826/image.png",
+                github: "https://github.com",
+                skills: ["Next.js", "Tailwind CSS", "Pocketbase"]
+            }
+        ]
+
 
     return (
         <div className="flex justify-center flex-col items-center">
@@ -53,6 +68,19 @@ export default function Projects() {
                     )
                 })}
             </div>
+
+            {isShowingMoreProjects &&
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-8">
+                    {moreProjects.map((project, key) => {
+                        return (
+                            <ProjectCard key={key} props={project} />
+                        )
+                    })}
+                </div>
+            }
+
+            <Button onClick={() => setShowingMoreProjects(x => !x)} variant="ghost" className="mt-4">{isShowingMoreProjects ? "View less" : "View more"}</Button>
+
 
             {/* <Pagination className="mt-8" total={2} initialPage={1} /> */}
         </div>
