@@ -5,6 +5,7 @@ import ProjectCard from "./Cards/ProjectCard";
 import Projects from "./Heroes/Projects";
 import Skills from "./Heroes/Skills";
 import Experience from "./Heroes/Experiences";
+import Footer from "./Footer";
 
 export default function Hero() {
     return (
@@ -12,6 +13,7 @@ export default function Hero() {
             <Projects />
             <Experience />
             <Skills />
+            <Footer />
         </div>
     )
 }
