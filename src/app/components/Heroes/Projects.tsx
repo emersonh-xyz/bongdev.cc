@@ -50,9 +50,23 @@ export default function Projects() {
                 title: "clipit.systems",
                 content: "A website designed for users to easily share & upload various gaming clips.",
                 link: "https://clipit.systems",
-                logo: "https://cdn.discordapp.com/attachments/949488673823551578/1145737138122530826/image.png",
+                logo: "",
                 github: "https://github.com",
                 skills: ["Next.js", "Tailwind CSS", "Pocketbase"]
+            },
+            {
+                title: 'YouTube Role Notifier',
+                content: "A Discord bot that pings users of a specefifc role when a new YouTube upload goes live.",
+                github: "https://github.com/emersonh-xyz/studiogek-discordjs/",
+                skills: ["Node.js", "JavaScript", "Discord API",]
+
+            },
+            {
+                title: 'Portfolio Website',
+                content: "You're on it right now!",
+                github: "https://github.com/emersonh-xyz/bongdev.cc",
+                link: "https://bongodev.cc",
+                skills: ["TypeScript", "Next.js", "Next UI", "Tailwind CSS", "MongoDB"]
             }
         ]
 

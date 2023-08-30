@@ -45,7 +45,7 @@ export default function Sidebar() {
             </div>
             <Card shadow="sm" className="mt-4">
                 <CardBody className="sm:text-xs sm:text-left text-sm text-center">
-                    <p className="text-zinc-900 dark:text-zinc-50">Hey, I'm Emerson! 👋</p>
+                    <p className="text-zinc-900 dark:text-zinc-50">Hey, I'm Emerson! 👋</p><br />
                     <p className="text-zinc-900 dark:text-zinc-50">I enjoy doing freelance development and building out client-side applications. </p>
                 </CardBody>
             </Card>

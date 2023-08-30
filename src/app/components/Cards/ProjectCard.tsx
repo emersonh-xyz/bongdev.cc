@@ -24,22 +24,28 @@ export default function ProjectCard({ props }: any) {
         <Card className="max-w-[460px]">
             <CardHeader className="flex gap-3">
 
-                <Image
-                    alt="nextui logo"
-                    height={40}
-                    radius="sm"
-                    src={props.logo}
-                    width={40}
-                />
+                {props.logo ?
+                    <Image
+                        alt="nextui logo"
+                        height={40}
+                        radius="sm"
+                        src={props.logo}
+                        width={40}
+                    />
+                    :
+                    <Icon width={40} icon={"mdi:picture-in-picture-bottom-right"} />
+                }
 
                 <div className="flex flex-col">
                     <p className="text-md">{props.title}</p>
                     <div className="flex gap-1 justify-left">
-                        <Tooltip showArrow={true} content="View application" placement="bottom">
-                            <Link target="_blank" href={props.link}>
-                                <Icon className="text-zinc-600 dark:text-zinc-50" width={22} icon="mdi:link" />
-                            </Link>
-                        </Tooltip>
+                        {props.link &&
+                            <Tooltip showArrow={true} content="View application" placement="bottom">
+                                <Link target="_blank" href={props.link}>
+                                    <Icon className="text-zinc-600 dark:text-zinc-50" width={22} icon="mdi:link" />
+                                </Link>
+                            </Tooltip>
+                        }
                         {props.github &&
                             <Tooltip showArrow={true} content="Open on GitHub" placement="bottom">
                                 <Link target="_blank" href={props.github}>
