@@ -11,7 +11,7 @@ export default function BlogPost({ props }: any) {
     }
 
     return (
-        <Card isPressable isHoverable className="mt-2 w-full">
+        <Card isPressable className="mt-2 w-full">
             <CardBody>
                 <div className="mt-2">
                     <div className="flex flex-row">
