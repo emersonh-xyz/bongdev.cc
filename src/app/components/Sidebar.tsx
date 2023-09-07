@@ -1,6 +1,6 @@
 'use client';
 
-import { Button, Card, CardBody, CardHeader, Chip, CircularProgress, Divider, Image, Link, Skeleton, Tooltip } from "@nextui-org/react";
+import { Card, CardBody, Image, Link, Tooltip } from "@nextui-org/react";
 import { Icon } from '@iconify/react';
 import SpotifyCard from "./Cards/SpotifyCard";
 import useSWR from 'swr'
@@ -14,7 +14,6 @@ export default function Sidebar() {
     const { theme, setTheme } = useTheme()
 
     return (
-
 
         <div className="sm:flex sm:flex-col sm:w-1/4 w-fit justify-center h-full bg-zinc-100 p-10 border-r-1 light:border-zinc-200 dark:bg-zinc-800 dark:border-zinc-600 ">
             <Tooltip showArrow={true} content="Click for a surprise">

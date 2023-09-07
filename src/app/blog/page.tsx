@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { Metadata } from 'next'
 import Sidebar from '../components/Sidebar'
 import Hero from '../components/Landing'
-import RecentPosts from '../components/Heroes/RecentPosts'
+import RecentPosts from '../components/Heroes/BlogPosts'
 import BlogLanding from '../components/BlogLanding'
 
 export const metadata: Metadata = {
