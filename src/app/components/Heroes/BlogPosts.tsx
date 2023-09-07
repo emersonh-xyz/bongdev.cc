@@ -6,14 +6,12 @@ import { Card, CardBody, Divider, Link, Skeleton } from "@nextui-org/react";
 export default function BlogPosts() {
 
     const [posts, setPosts] = useState([]);
-
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-
         async function getPosts() {
             const res = await fetch('/api/blog/all')
             // The return value is *not* serialized
-            // You can return Date, Map, Set, etc.
 
             if (!res.ok) {
                 // This will activate the closest `error.js` Error Boundary
@@ -23,6 +21,7 @@ export default function BlogPosts() {
             const data = await res.json()
 
             setPosts(data.posts);
+            setLoading(false);
         }
 
         getPosts();
@@ -34,14 +33,12 @@ export default function BlogPosts() {
             <p className="text-3xl font-bold">Emerson's Blog</p>
             <p className="text-thin font-light ">Stuff I talk about</p>
             <div className="mt-2 w-full">
-                <Suspense fallback={<Skeleton />}>
-                    {posts.map((post: Post, key: number) => {
-                        return (
-                            <BlogPost props={post} />
-                        )
-                    })}
-                </Suspense>
-
+                {loading && <Skeleton><BlogPost /></Skeleton>}
+                {posts.map((post: Post, key: number) => {
+                    return (
+                        <BlogPost key={key} props={post} />
+                    )
+                })}
             </div>
         </div>
     )
