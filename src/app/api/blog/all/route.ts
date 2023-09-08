@@ -12,6 +12,7 @@ export async function GET() {
 
         const db = client.db("blog")
         const posts = await db.collection('posts').find().toArray();
+
         return NextResponse.json({ posts: posts })
 
     }

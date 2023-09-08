@@ -1,26 +1,22 @@
 'use client';
+import timeAgo from "@/app/lib/timeAgo";
 import { Card, CardBody, CardFooter, CardHeader, Link } from "@nextui-org/react";
 
 export default function BlogPost({ props }: any) {
-
-    if (!props) {
-        props = {
-            title: "example title",
-            date: 'example date'
-        }
-    }
-
+    if (!props) return;
     return (
         <Card isPressable className="mt-2 w-full">
             <CardBody>
                 <div className="mt-2">
-                    <div className="flex flex-row">
+                    <div className="flex flex-row justify-between items-center">
                         <div>
-                            <Link className="text-xl">{props.name}</Link>
+                            <Link href={`blog/${props.slug}`} className="text-xl">{props.title}</Link>
                         </div>
-                        <div className="justify-end ml-10">August 21st, 2023</div>
+                        <p className="ml-20 text-sm">{timeAgo(props.date)}</p>
                     </div>
-                    <p className="font-light">Ever wondered how to do this?</p>
+                    <div>
+                        <p className="font-light">{props.summary}</p>
+                    </div>
                 </div>
             </CardBody>
         </Card>
