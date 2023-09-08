@@ -3,10 +3,17 @@
 import Post from "@/app/components/Heroes/Post";
 import Sidebar from "@/app/components/Sidebar";
 import { Skeleton } from "@nextui-org/react";
+import { Metadata } from "next";
 import { useEffect, useState } from "react";
 
+export const metadata: Metadata = {
+    title: 'bongodev.cc | Portfolio',
+    description: 'Portfolio website',
+    themeColor: "#FFFFFF"
+}
 
 export default function BlogPost({ params }: any) {
+
 
     const { id } = params;
 
