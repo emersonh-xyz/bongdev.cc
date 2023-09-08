@@ -2,7 +2,7 @@
 import timeAgo from "@/app/lib/timeAgo";
 import { Card, CardBody, CardFooter, CardHeader, Link } from "@nextui-org/react";
 
-export default function BlogPost({ props }: any) {
+export default function BlogCard({ props }: any) {
     if (!props) return;
     return (
         <Card isPressable className="mt-2 w-full">

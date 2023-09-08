@@ -1,6 +1,6 @@
 'use client';
 import { Suspense, useEffect, useState } from "react";
-import BlogPost from "../Cards/BlogPost";
+import BlogCard from "../Cards/BlogCard";
 import { Card, CardBody, Divider, Link, Skeleton } from "@nextui-org/react";
 
 export default function BlogPosts() {
@@ -33,10 +33,10 @@ export default function BlogPosts() {
             <p className="text-3xl font-bold">Emerson's Blog</p>
             <p className="text-thin font-light ">Stuff I talk about</p>
             <div className="mt-2 w-full">
-                {loading && <Skeleton><BlogPost /></Skeleton>}
+                {loading && <Skeleton><BlogCard /></Skeleton>}
                 {posts.map((post: Post, key: number) => {
                     return (
-                        <BlogPost key={key} props={post} />
+                        <BlogCard key={key} props={post} />
                     )
                 })}
             </div>

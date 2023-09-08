@@ -19,7 +19,7 @@ export default function Sidebar() {
             <Tooltip showArrow={true} content="Click for a surprise">
                 <Image
                     onClick={() => { theme === "light" ? setTheme('dark') : setTheme('light') }}
-                    src="./bongo.png"
+                    src="/bongo.png"
 
                 />
             </Tooltip>
