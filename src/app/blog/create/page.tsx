@@ -26,7 +26,7 @@ export default function CreatePost() {
                 <Button className="w-full" color="success" variant="faded">Submit</Button>
             </div>
 
-            <article className={`prose ${theme === "dark" && 'prose-invert'} w-full h-full ml-2`}>
+            <article className={`prose ${theme !== "light" && 'prose-invert'} w-full h-full ml-2`}>
                 <Card className="">
                     <CardBody>
                         <ReactMarkdown
