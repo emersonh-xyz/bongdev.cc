@@ -16,7 +16,12 @@ export async function POST(request: Request) {
         // Get request params
         const res = await request.json()
 
-        const { title, content, summary } = res
+        const { title, content, summary, password } = res
+
+        if (password !== process.env.SECRET) {
+            return NextResponse.json({ message: "Error: Incorrect password" })
+        }
+
         const date = new Date();
         const slug = convertToSlug(title);
 
@@ -24,7 +29,7 @@ export async function POST(request: Request) {
         const client = await clientPromise
 
         if (!client) {
-            return NextResponse.json({ error: "No client could be created from Mongo" })
+            return NextResponse.json({ message: "Error: No client could be created from Mongo" })
         }
 
         const db = client.db("blog")
@@ -40,11 +45,11 @@ export async function POST(request: Request) {
 
         })
 
-        return NextResponse.json({ message: "Success!" })
+        return NextResponse.json({ message: `Blog ${title} has been created!`, slug: slug })
 
     }
     catch (e) {
-        return NextResponse.json({ error: e })
+        return NextResponse.json({ message: e })
     }
 
 }

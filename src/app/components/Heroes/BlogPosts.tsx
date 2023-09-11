@@ -10,11 +10,12 @@ export default function BlogPosts() {
 
     useEffect(() => {
         async function getPosts() {
-            const res = await fetch('/api/blog/all')
+            const res = await fetch('/api/blog/all', {
+                cache: "no-store"
+            })
             // The return value is *not* serialized
 
             if (!res.ok) {
-                // This will activate the closest `error.js` Error Boundary
                 throw new Error('Failed to fetch data')
             }
 

@@ -15,7 +15,8 @@ export default function CreatePost() {
         const data = {
             title: title,
             content: content,
-            summary: summary
+            summary: summary,
+            password: password
         }
 
         const response = await fetch('/api/blog/new', {
@@ -23,19 +24,25 @@ export default function CreatePost() {
             body: JSON.stringify(data)
         }).then((res) => res.json());
 
-        alert(response);
+        alert(response.message)
+
+        if (response.slug) {
+            window.location.href = `/blog/${response.slug}`
+        }
 
     }
 
     const [content, setContent] = useState("");
     const [title, setTitle] = useState("");
     const [summary, setSummary] = useState("")
+    const [password, setPassword] = useState("");
 
     const { theme } = useTheme();
 
     return (
-        <main className="flex flex-row justify-center m-auto  p-20 w-full h-1/3">
+        <main className="flex flex-row justify-center m-auto  p-20 w-full h-1/3" >
             <div className="w-full h-96">
+                {theme}
                 <Input
                     isRequired
                     type="text"
@@ -49,7 +56,7 @@ export default function CreatePost() {
                     isRequired
                     type="text"
                     label="Summary"
-                    placeholder="Short and sweet :)"
+                    placeholder="Short summary"
                     value={summary}
                     onValueChange={setSummary}
                     className="mt-2"
@@ -57,11 +64,18 @@ export default function CreatePost() {
                 />
                 <Textarea
                     labelPlacement="outside"
-                    placeholder="Start writing ✨"
+                    placeholder="Start writing "
                     value={content}
                     onValueChange={setContent}
                 />
-                <Button onClick={createPost} className="w-full" color="success" variant="faded">Submit</Button>
+                <Input
+                    placeholder="Password"
+                    isRequired
+                    type="password"
+                    onValueChange={setPassword}
+                    value={password}
+                />
+                <Button onClick={createPost} className="w-full mt-2" color="success" variant="faded">Submit</Button>
             </div>
             <article className={`prose ${theme !== "light" && 'prose-invert'} w-full h-full ml-2`}>
 
@@ -94,6 +108,6 @@ export default function CreatePost() {
                     </CardBody>
                 </Card>
             </article>
-        </main>
+        </main >
     )
 }
