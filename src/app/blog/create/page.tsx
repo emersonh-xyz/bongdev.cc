@@ -42,7 +42,6 @@ export default function CreatePost() {
     return (
         <main className="flex flex-row justify-center m-auto  p-20 w-full h-1/3" >
             <div className="w-full h-96">
-                {theme}
                 <Input
                     isRequired
                     type="text"

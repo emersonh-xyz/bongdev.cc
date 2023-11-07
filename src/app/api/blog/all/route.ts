@@ -11,7 +11,7 @@ export async function GET() {
         }
 
         const db = client.db("blog")
-        const posts = await db.collection('posts').find().toArray();
+        const posts = (await db.collection('posts').find().toArray()).reverse();
 
         return NextResponse.json({ posts: posts })
 

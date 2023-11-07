@@ -27,8 +27,8 @@ export default function Projects() {
             skills: ["JavaScript", "Tailwind CSS", "Google OAuth", "GPT-3", "React.js"],
         },
         {
-            title: "Bongo Media",
-            content: "A web application for creators and users to view and interact with various media-- integrated directly with Patreon.",
+            title: "Studio Gek Patreon Viewer",
+            content: "A web application for creators to share various media with their audience-- integrated directly with Patreon.",
             link: "https://studiogek.vercel.app/",
             logo: "https://yt3.googleusercontent.com/Ak5-KfSpjDFpZpLy-QutumUjxE7dFny56-H9hYi4gIsAHGmOowvLAXLnF_Ft8MR2HOpw7OL4=s900-c-k-c0x00ffffff-no-rj",
             github: "",
@@ -41,11 +41,19 @@ export default function Projects() {
             logo: "https://play-lh.googleusercontent.com/QKuHNPzyKfPKyLJKhRQSiCFOkhB4xRtU1dnSslduvoXcPxO9_t6KGlPDXKbtnd6Ck0bo",
             github: "https://github.com/emersonh-xyz/inkdrop-discord-rpc",
             skills: ["Electron", "Node.js", "JavaScript"]
-        }
+        },
     ]
 
     const moreProjects =
         [
+            {
+                title: "2ndOpinion",
+                content: "2ndOpinion acts as a patient data management tool designed with healthcare personnel in mind, analyzing conversations for critical incongruencies.",
+                link: "https://devpost.com/software/secondopinion",
+                logo: "https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/002/643/219/datas/gallery.jpg",
+                github: "https://github.com/bwgoulet/secondopinion",
+                skills: ["Next.js", "NextAuth", "Tailwind CSS", "MonogDB", "Node.js", "Google OAuth", "GPT-4"]
+            },
             {
                 title: "clipit.systems",
                 content: "A website designed for users to easily share & upload various gaming clips.",
@@ -55,8 +63,9 @@ export default function Projects() {
                 skills: ["Next.js", "Tailwind CSS", "Pocketbase"]
             },
             {
-                title: 'YouTube Role Notifier',
-                content: "A Discord bot that pings users of a specefifc role when a new YouTube upload goes live.",
+                title: 'Studio Gek Bot',
+                content: "A Discord bot built for a community server that has automated YouTube announcements, admin utility, and other fun capabilities.",
+                logo: "https://yt3.googleusercontent.com/Ak5-KfSpjDFpZpLy-QutumUjxE7dFny56-H9hYi4gIsAHGmOowvLAXLnF_Ft8MR2HOpw7OL4=s900-c-k-c0x00ffffff-no-rj",
                 github: "https://github.com/emersonh-xyz/studiogek-discordjs/",
                 skills: ["Node.js", "JavaScript", "Discord API",]
 

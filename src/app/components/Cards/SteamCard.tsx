@@ -16,7 +16,7 @@ export default function SteamCard() {
         <div>
             {data.steam.personastate === "Offline" ?
 
-                <Card isPressable >
+                <Card className="w-72" isPressable >
                     <CardBody className="p-2">
                         <div className="flex items-center">
                             <Icon className="" icon="mdi:steam" width={40} />
@@ -31,7 +31,7 @@ export default function SteamCard() {
                 </Card>
                 :
                 <Link target="_blank" href={data.steam.getprofileUrl}>
-                    <Card isPressable >
+                    <Card className="w-72" isPressable >
                         <CardBody className="p-2">
                             <div className="flex items-center">
                                 <Icon className="" icon="mdi:steam" width={40} />

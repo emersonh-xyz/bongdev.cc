@@ -31,7 +31,7 @@ export default function SpotifyCard({ props }: any) {
     return (
         <div>
             {!data.data?.isPlaying ?
-                <Card isPressable >
+                <Card className="w-72" isPressable >
                     <CardBody className="p-2">
                         <div className="flex items-center">
                             <Icon className="text-[#1DB954]" icon="mdi:spotify" width={40} />
@@ -46,7 +46,7 @@ export default function SpotifyCard({ props }: any) {
                 </Card>
                 :
                 <Link target="_blank" href={data.songUrl} >
-                    <Card shadow="sm" isPressable >
+                    <Card className="w-72" shadow="sm" isPressable >
                         <CardBody className="p-2">
                             <div className="flex items-center">
                                 <Image

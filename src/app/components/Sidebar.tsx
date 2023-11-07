@@ -1,6 +1,6 @@
 'use client';
 
-import { Card, CardBody, Image, Link, Tooltip } from "@nextui-org/react";
+import { Card, CardBody, Divider, Image, Link, Spinner, Tooltip } from "@nextui-org/react";
 import { Icon } from '@iconify/react';
 import SpotifyCard from "./Cards/SpotifyCard";
 import useSWR from 'swr'
@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import { ThemeSwitcher } from "./Utils/ThemeSwitcher";
 import { useTheme } from "next-themes";
 import SteamCard from "./Cards/SteamCard";
+import RecentBlogPost from "./Cards/RecentBlogPost";
 
 export default function Sidebar() {
 
@@ -23,7 +24,7 @@ export default function Sidebar() {
 
                 />
             </Tooltip>
-            <p className="text-4xl light:text-zinc-900 font-bold text-center sm:text-left">Emerson Hicks</p>
+            <a href="/" className="text-4xl light:text-zinc-900 font-bold text-center sm:text-left hover:text-primary">Emerson Hicks</a>
             <div className="flex mt-4 gap-4 sm:justify-start justify-center">
                 <Tooltip showArrow={true} content="@emerson on Discord" placement="bottom">
                     <Icon className="text-zinc-900 dark:text-zinc-50" width={26} icon="ic:baseline-discord" />
@@ -53,6 +54,9 @@ export default function Sidebar() {
             </div>
             <div className="mt-4 flex justify-center sm:justify-start">
                 <SteamCard />
+            </div>
+            <div className="mt-4 flex flex-col justify-center sm:justify-start">
+                <RecentBlogPost />
             </div>
         </div >
     )
