@@ -39,7 +39,7 @@ export default function RecentBlogPost() {
                         <Icon className="text-md" icon="la:blog" width={40} />
                         <div className="ml-2">
                             <div className="flex items-center ">
-                                <p className="text-sm ml-1">Recent blog post</p>
+                                <p className="text-sm ml-1">Recent Blog post</p>
                             </div>
                             <Link href={`/blog/${post.slug}`} className="text-sm ml-1 font-bold">{post.title}</Link>
                         </div>
