@@ -1,3 +1,5 @@
+'use client';
+
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { Button, Card, CardBody, CardFooter, CardHeader, Chip, Divider, Image, Link, Skeleton, Tooltip } from "@nextui-org/react";
 import { useEffect, useState } from "react";

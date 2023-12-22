@@ -1,3 +1,5 @@
+'use client';
+
 import ExperienceCard from "../Cards/ExperienceCard";
 
 export default function Experience() {

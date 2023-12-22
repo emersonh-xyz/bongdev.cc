@@ -1,3 +1,5 @@
+'use client';
+
 import SkillCard from "../Cards/SkillCard";
 
 export default function Skills() {

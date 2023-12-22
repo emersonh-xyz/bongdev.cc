@@ -55,7 +55,7 @@ export default function Sidebar() {
             <div className="mt-4 flex justify-center sm:justify-start">
                 <SteamCard />
             </div>
-            <div className="mt-4 flex flex-col justify-center sm:justify-start">
+            <div className="mt-4 flex  justify-center sm:justify-start">
                 <RecentBlogPost />
             </div>
         </div >
