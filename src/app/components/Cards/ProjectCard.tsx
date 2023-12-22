@@ -66,7 +66,7 @@ export default function ProjectCard({ props }: any) {
             <Divider />
             <CardFooter className="sm:h-24 flex items-start">
                 <div className="flex flex-wrap gap-2">
-                    {props.title === "Brevity" && <Chip color="primary">⭐️ 2nd Place Winner HackNC 2022</Chip>}
+                    {props.title === "Brevity" && <Chip color="primary">🏅 2nd Place HackNC 2022</Chip>}
                     {props.skills.map((skill: any, key: any) => {
                         return (
                             <Chip key={key}>{skill}</Chip>
