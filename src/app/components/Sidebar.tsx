@@ -26,21 +26,27 @@ export default function Sidebar() {
             </Tooltip>
             <a href="/" className="text-4xl light:text-zinc-900 font-bold text-center sm:text-left hover:text-primary">Emerson Hicks</a>
             <div className="flex mt-4 gap-4 sm:justify-start justify-center">
-                <Tooltip showArrow={true} content="@emerson on Discord" placement="bottom">
-                    <Icon className="text-zinc-900 dark:text-zinc-50" width={26} icon="ic:baseline-discord" />
-                </Tooltip>
+
                 <Tooltip showArrow={true} content="@emerson-xyz on GitHub" placement="bottom">
                     <Link target="_blank" href="https://github.com/emersonh-xyz">
                         <Icon className="text-zinc-900 dark:text-zinc-50" width={26} icon="mdi:github" />
                     </Link>
                 </Tooltip>
-                {/* <Tooltip showArrow={true} content="Linkedin profile" placement="bottom">
+                <Tooltip showArrow={true} content="Linkedin" placement="bottom">
                     <Link target="_blank" href="https://www.linkedin.com/in/emerson-hicks-2975a1220/">
                         <Icon className="text-zinc-900 dark:text-zinc-50" width={26} icon="mdi:linkedin" />
                     </Link>
-                </Tooltip> */}
-                <Tooltip showArrow={true} content="Contact me" placement="bottom">
+                </Tooltip>
+                <Tooltip showArrow={true} content="emersonhicks003@gmail.com" placement="bottom">
                     <Icon className="text-zinc-900 dark:text-zinc-50" width={26} icon="mdi:email" />
+                </Tooltip>
+                <Tooltip showArrow={true} content="@emerson on Discord" placement="bottom">
+                    <Icon className="text-zinc-900 dark:text-zinc-50" width={26} icon="ic:baseline-discord" />
+                </Tooltip>
+                <Tooltip showArrow={true} content="YouTube" placement="bottom">
+                    <Link target="_blank" href="https://www.youtube.com/channel/UCEpnItPzI-Gt9VwbAQdORgw">
+                        <Icon className="text-zinc-900 dark:text-zinc-50" width={26} icon="mdi:youtube" />
+                    </Link>
                 </Tooltip>
             </div>
             <Card shadow="sm" className="mt-4">
